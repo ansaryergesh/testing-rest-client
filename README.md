@@ -3,6 +3,10 @@
 # Description
 Testing the [Rest Client](https://github.com/rest-client/rest-client) a simple DSL for accessing HTTP and REST resources.
 
+# How to run:
+
+Open the terminal and write: <b> ruby main.rb </b>
+
 ## Used:
 * Ruby 2.5.5
 
