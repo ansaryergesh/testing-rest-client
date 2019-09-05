@@ -1,15 +1,17 @@
 require 'rest-client'
 
-resources = RestClient.get 'https://www.bing.com/search', {params: {'Ruby'}}
-begin
+puts "Enter something to search: "
+search_val = gets.chomp
+resources = RestClient.get 'https://www.bing.com/search', {params: {q: search_val}}
+
+puts "Status: "
 puts resources.code
-puts -------------
+puts '-------------'
+puts "Headers: "
 puts resources.headers
-puts -------------
+puts '-------------'
+puts "Cookies: "
 puts resources.cookies
-puts -------------
+puts '-------------'
+puts "Body: "
 puts resources.body
-
-
-puts RestClient::Request.execute(method: :get, url: 'https://www.bing.com/search',
-  timeout: 10)
